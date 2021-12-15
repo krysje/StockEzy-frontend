@@ -1,3 +1,4 @@
+import { User } from './../../models/user.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+  user: User
 
   constructor() { }
 

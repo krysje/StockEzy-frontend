@@ -28,12 +28,7 @@ export class LoginService {
   }
 
   isLoggedIn(){
-    let token = localStorage.getItem("token");
-    if(token == undefined || token === '' || token == null){
-      return false;
-    }
-    else
-      return true;
+   return !!localStorage.getItem('token');
   }
 
   logout(){

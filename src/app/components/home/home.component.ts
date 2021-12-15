@@ -1,3 +1,4 @@
+import { LoginService } from './../../services/login.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public loggedIn = false;
+
+  constructor(private loginService:LoginService) { }
 
   ngOnInit(): void {
+    this.loggedIn = this.loginService.isLoggedIn(); 
   }
 
 }

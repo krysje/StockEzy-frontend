@@ -1,3 +1,5 @@
+import { RegisterComponent } from './components/register/register.component';
+import { AuthGuard } from './services/auth.guard';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,9 +18,15 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
+    path:'register',
+    component:RegisterComponent,
+    pathMatch:'full'
+  },
+  {
     path: 'dashboard',
     component:DashboardComponent,
-    pathMatch:'full'
+    pathMatch:'full',
+    canActivate:[AuthGuard]
   }
 ];
 

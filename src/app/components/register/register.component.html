@@ -1,0 +1,52 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                   <div class="container text-center">
+                       <img class="img-fluid" style="width: 100px;" src="assets/register-icon.png" alt="login-icon"/>
+                   </div> 
+
+                <h1 class="text-center">Register</h1>
+
+                <!-- creating form -->
+        
+                    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                        <mat-form-field class="full-width">
+                            <mat-label>User Name</mat-label>
+                            <input
+                                formControlName="username"  
+                                type="text" 
+                                matInput />
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width">
+                            <mat-label>Mobile No.</mat-label>
+                            <input 
+                            formControlName="mobileNo" 
+                            type="text" matInput />
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width">
+                            <mat-label>E-mail</mat-label>
+                            <input 
+                            formControlName="email" 
+                            type="email" matInput />
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width">
+                            <mat-label>Password</mat-label>
+                            <input 
+                            formControlName="password" 
+                            type="password" matInput />
+                        </mat-form-field>
+
+                        <div class="text-center mt">
+                            <button [disabled]="!formGroup.valid" class="full-width" type="submit" mat-raised-button color="accent">
+                                Register
+                            </button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
