@@ -3,6 +3,6 @@
     <span class="spacer"></span>
     <a *ngIf="!loggedIn" mat-icon-button routerLink="/login">Login</a>
     <a *ngIf="!loggedIn" mat-icon-button routerLink="/register">Register</a>
-    <a *ngIf="loggedIn" mat-icon-button>User</a>
+    <a *ngIf="loggedIn" mat-icon-button routerLink="/dashboard">User</a>
     <a *ngIf="loggedIn" (click)="logoutUser()" mat-icon-button>Logout</a>
 </mat-toolbar>  

@@ -1,3 +1,6 @@
+import { AddCompanyComponent } from './components/admin/add-company/add-company.component';
+import { EditCompanyComponent } from './components/admin/edit-company/edit-company.component';
+import { CompaniesComponent } from './components/admin/companies/companies.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from './services/auth.guard';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -26,6 +29,21 @@ const routes: Routes = [
     path: 'dashboard',
     component:DashboardComponent,
     pathMatch:'full',
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'view-all-companies',
+    component:CompaniesComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'edit-company',
+    component:EditCompanyComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'add-company',
+    component:AddCompanyComponent,
     canActivate:[AuthGuard]
   }
 ];

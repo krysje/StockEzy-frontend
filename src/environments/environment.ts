@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  url: 'http://localhost:5000/api/'
+  account_url:'http://localhost:5001/api/Account',
+  stock_url: 'http://localhost:5002/api/Admin'
 };
 
 /*

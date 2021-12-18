@@ -1,3 +1,15 @@
 .full-width{
     width: 100%
 }
+
+form{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    color: primary;
+    font-weight: bold;
+    text-decoration: none;
+}

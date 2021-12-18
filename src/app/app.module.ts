@@ -1,3 +1,5 @@
+import { AdminService } from './services/admin.service';
+import { RegisterService } from './services/register.service';
 import { AuthGuard } from './services/auth.guard';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,7 +19,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginService } from './services/login.service';
 import { TokenInterceptor } from './services/token.interceptor';
-import { RegisterComponent } from './components/register/register.component'
+import { RegisterComponent } from './components/register/register.component';
+import { CompaniesComponent } from './components/admin/companies/companies.component'
+import { MatTableModule } from '@angular/material/table';
+import { MatIcon, MatIconModule } from '@angular/material/icon'
+import { EditCompanyComponent } from './components/admin/edit-company/edit-company.component';
+import { AddCompanyComponent } from './components/admin/add-company/add-company.component'  
 
 @NgModule({
   declarations: [
@@ -26,7 +33,10 @@ import { RegisterComponent } from './components/register/register.component'
     HomeComponent,
     LoginComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    CompaniesComponent,
+    EditCompanyComponent,
+    AddCompanyComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +48,11 @@ import { RegisterComponent } from './components/register/register.component'
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatIconModule
   ],
-  providers: [LoginService, AuthGuard, 
+  providers: [LoginService, AuthGuard, RegisterService, AdminService,
   {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,

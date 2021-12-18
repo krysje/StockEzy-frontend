@@ -1,0 +1,74 @@
+<div class="container mt text-center">
+
+  <div class="row">
+    <div class="col-sm-2">
+        <button mat-icon-button color="primary" routerLink="/dashboard">
+            <mat-icon>undo</mat-icon>
+          </button>
+    </div>
+        <div class="col-sm-8">
+            <h2>All Companies</h2>
+        </div>  
+
+        <div class="col-sm-2">
+          <button mat-icon-button color="primary">
+            <mat-icon>add-box</mat-icon>
+            Add a new Company
+          </button>
+      </div>  
+
+    </div>
+
+  <div class="container text-center">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+    <ng-container matColumnDef="companyCode">
+      <th mat-header-cell *matHeaderCellDef>Company Code</th>
+      <td mat-cell *matCellDef="let company">{{company.companyCode}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="companyName">
+      <th mat-header-cell *matHeaderCellDef>Company Name</th>
+      <td mat-cell *matCellDef="let company">{{company.companyName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="turnover">
+        <th mat-header-cell *matHeaderCellDef>Turnover</th>
+        <td mat-cell *matCellDef="let company">{{company.turnover}}</td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="ceo">
+        <th mat-header-cell *matHeaderCellDef>CEO</th>
+        <td mat-cell *matCellDef="let company">{{company.ceo}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="boardOfDirectors">
+        <th mat-header-cell *matHeaderCellDef>Board of Directors</th>
+        <td mat-cell *matCellDef="let company">{{company.boardOfDirectors}}</td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="listedinStockExchanges">
+        <th mat-header-cell *matHeaderCellDef>Listed in Stock Exchanges</th>
+        <td mat-cell *matCellDef="let company">{{company.listedinStockExchanges}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="sectorId">
+        <th mat-header-cell *matHeaderCellDef>Sector ID</th>
+        <td mat-cell *matCellDef="let company">{{company.sectorId}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="brief">
+        <th mat-header-cell *matHeaderCellDef>Brief</th>
+        <td mat-cell *matCellDef="let company">{{company.brief}}</td>
+      </ng-container>
+      
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row (click)='GetItem(row.companyCode)' *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+</div>
+ </div>
+ 

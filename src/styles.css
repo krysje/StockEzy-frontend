@@ -10,3 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mt{
     margin-top: 20px;
 }
+
+a:hover{
+    color: inherit;
+}

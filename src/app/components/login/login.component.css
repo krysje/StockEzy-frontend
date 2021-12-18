@@ -1,3 +1,14 @@
+form{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .full-width{
     width:100%;
+}
+
+.register{
+    font-weight: bolder;
+    text-decoration: none;
 }

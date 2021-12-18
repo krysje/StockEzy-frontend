@@ -15,10 +15,6 @@ export class LoginComponent implements OnInit {
   authuser: Authuser;
   formGroup: FormGroup;
  
-  credentials={
-    email:'',
-    password:''
-  }
 
   constructor(private formbuilder: FormBuilder, private loginService:LoginService, private router:Router ) { 
     this.loginCred = new Login();
@@ -26,6 +22,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+    if(localStorage.getItem('token') != null){
+      this.router.navigate(['dashboard']);
+    }
   }
 
   initForm(){
@@ -50,6 +49,7 @@ export class LoginComponent implements OnInit {
         },
         error=>{
           console.log(error);
+          alert("Invalid Email or password");
         })}
       else{
         console.log("Not Valid");

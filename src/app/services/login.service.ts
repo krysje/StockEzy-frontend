@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Login } from './../models/login.model';
 import { Authuser } from './../models/authuser.model';
 import { HttpClient } from '@angular/common/http';
@@ -9,13 +10,13 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
  
-  url = "http://localhost:5000/api/Account";
+  account_url = environment.account_url;
   
   constructor(private http:HttpClient) { }
 
   //calling the server 
   doLogin(loginCred:Login):Observable<any>{
-    return this.http.post(`${this.url}/login`, loginCred);
+    return this.http.post(`${this.account_url}/login`, loginCred);
   }
 
     
