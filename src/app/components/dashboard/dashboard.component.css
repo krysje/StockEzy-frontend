@@ -1,12 +1,37 @@
-a{
-    margin-top: 40px;
+mat-sidenav-container{
+    height: 100%;
+}
+
+mat-sidenav, mat-sidenav-content{
+    padding: 16px;
+}
+
+mat-sidenav{
+    width: 30%;
+    background-color: #060808de;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.menu-button{
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+}
+
+mat-icon, span{
+    margin-right: 8px;
+}
+
+.manage-button{
+    margin-top: 20px;
 }
 
 h1{
     font-size:xx-large;
 }
-
-div{
-    margin-top: 10%;
-}
-

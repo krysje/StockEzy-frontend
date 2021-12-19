@@ -10,3 +10,7 @@ a{
 .big{
     font-size: 125%;
 }
+
+mat-toolbar{
+    height: 70px;
+}

@@ -6,12 +6,12 @@
             <mat-icon>undo</mat-icon>
           </button>
     </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
             <h2>All Companies</h2>
         </div>  
 
-        <div class="col-sm-2">
-          <button mat-icon-button color="primary">
+        <div class="col-sm-1">
+          <button mat-icon-button color="primary" routerLink="/add-company">
             <mat-icon>add-box</mat-icon>
             Add a new Company
           </button>
@@ -24,12 +24,12 @@
 
     <ng-container matColumnDef="companyCode">
       <th mat-header-cell *matHeaderCellDef>Company Code</th>
-      <td mat-cell *matCellDef="let company">{{company.companyCode}}</td>
+      <td mat-cell *matCellDef="let company"><b>{{company.companyCode}}</b></td>
     </ng-container>
   
     <ng-container matColumnDef="companyName">
       <th mat-header-cell *matHeaderCellDef>Company Name</th>
-      <td mat-cell *matCellDef="let company">{{company.companyName}}</td>
+      <td mat-cell *matCellDef="let company"><b>{{company.companyName}}</b></td>
     </ng-container>
 
     <ng-container matColumnDef="turnover">

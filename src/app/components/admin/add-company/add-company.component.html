@@ -1,1 +1,91 @@
-<p>add-company works!</p>
+<div class="container mt text-center">
+
+    <div class="row">
+      <div class="col-sm-2">
+          <button mat-icon-button color="primary" routerLink="/view-all-companies">
+              <mat-icon>undo</mat-icon>
+            </button>
+      </div>
+          <div class="col-sm-8">
+              <h2>Add a Company</h2>
+          </div>  
+        </div>  
+        </div>
+
+        <div class="container mt">
+            <div class="row">
+                <div class="col align-self-center">
+
+
+            <form [formGroup]="_formGroup" (ngSubmit)="onAdd()">
+
+                <div class="form-group">
+                    <label class="col-form-label">Company Code</label>
+                    <div class="col-sm-10">
+                      <input formControlName ="companyCode" type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label  class="col-form-label">Company Name</label>
+                    <div class="col-sm-10">
+                      <input formControlName="companyName" type="text" class="form-control">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                  <label  class="col-form-label">TurnOver</label>
+                  <div class="col-sm-10">
+                    <input formControlName="turnover" type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-form-label">CEO</label>
+                  <div class="col-sm-10">
+                    <input formControlName="ceo" type="text" class="form-control" placeholder={{company.ceo}}>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label">Board Of Directors</label>
+                    <div class="col-sm-10">
+                      <input formControlName="boardOfDirectors" type="text" class="form-control" placeholder={{company.boardOfDirectors}}>
+                    </div>
+                  </div>
+
+
+                <div class="form-group ">
+                    <label class="col-form-label">Listed in Stock Exchanges</label>
+                    <div class="col-sm-10">
+                      <input formControlName="listedinStockExchanges" type="text" class="form-control" placeholder={{company.listedinStockExchanges}}>
+                    </div>
+                  </div>
+
+                
+                  <div class="form-group">
+                    <label class="col-form-label">Sector Id</label>
+                    <div class="col-sm-10">
+                      <input formControlName="sectorId" type="text" class="form-control" placeholder={{company.sectorId}}>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-form-label">Brief</label>
+                    <div class="col-sm-10">
+                      <input formControlName="brief" type="text" class="form-control" placeholder={{company.brief}}>
+                    </div>
+                  </div>
+              </form>
+
+              <div class="text-center mt">
+                <button [disabled]="!_formGroup.valid" class="full-width" (click)="onAdd()" mat-raised-button color="accent">
+                    Add
+                </button>
+            </div>
+
+            </div>
+
+            </div>
+
+        </div>

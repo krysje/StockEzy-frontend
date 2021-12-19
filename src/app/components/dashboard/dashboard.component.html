@@ -1,10 +1,26 @@
-<div class="container mt text-center">
-    <div class="row">
-        <h1>Hello, Admin</h1>
-    </div>
-    <table class="table">
-        <tr>
-            <td><a [routerLink]="[ '/view-all-companies']">ViewAllCompanies</a></td>
-        </tr>
-    </table>
-</div>
+<mat-sidenav-container>
+      <mat-sidenav #drawer>
+          <button class="menu-button" mat-button [routerLink]="['/view-all-companies']">
+              <mat-icon>business_center</mat-icon>
+              <span>Manage Companies</span>
+          </button>
+
+          <button class="menu-button" mat-button [routerLink]="['/view-all-stockexchanges']">
+            <mat-icon>account_balance</mat-icon>
+            <span>Manage Stock Exchanges</span>
+        </button>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <div class="container mt text-center">
+            <div class="row">
+                <h1>Hello, Admin</h1>
+                <p> Welcome to dashboard.</p>
+            </div>
+
+            <button class="manage-button" mat-raised-button color="primary" (click)="drawer.toggle()">
+                Manage
+              </button>
+        </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>

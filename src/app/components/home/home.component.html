@@ -3,5 +3,8 @@
              <h1>Welcome to StockEzy</h1>
              <span>Earning money, made easy!</span><br>   
         <a routerLink="/register" *ngIf="!loggedIn" mat-raised-button color="accent">Join us</a>
+        <a routerLink="/dashboard" *ngIf="loggedIn" mat-raised-button color="primary">Go to dashboard</a>
     </div>
 </div>
+
+

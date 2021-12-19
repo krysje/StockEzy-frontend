@@ -22,9 +22,13 @@ import { TokenInterceptor } from './services/token.interceptor';
 import { RegisterComponent } from './components/register/register.component';
 import { CompaniesComponent } from './components/admin/companies/companies.component'
 import { MatTableModule } from '@angular/material/table';
-import { MatIcon, MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon'
 import { EditCompanyComponent } from './components/admin/edit-company/edit-company.component';
-import { AddCompanyComponent } from './components/admin/add-company/add-company.component'  
+import { AddCompanyComponent } from './components/admin/add-company/add-company.component';
+import { StockExchangesComponent } from './components/admin/stock-exchanges/stock-exchanges.component';
+import { AddStockexchangeComponent } from './components/admin/add-stockexchange/add-stockexchange.component';
+import { EditStockexchangeComponent } from './components/admin/edit-stockexchange/edit-stockexchange.component'  
+import { MatSidenavModule } from '@angular/material/sidenav'
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { AddCompanyComponent } from './components/admin/add-company/add-company.
     RegisterComponent,
     CompaniesComponent,
     EditCompanyComponent,
-    AddCompanyComponent
+    AddCompanyComponent,
+    StockExchangesComponent,
+    AddStockexchangeComponent,
+    EditStockexchangeComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +57,8 @@ import { AddCompanyComponent } from './components/admin/add-company/add-company.
     ReactiveFormsModule,
     HttpClientModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [LoginService, AuthGuard, RegisterService, AdminService,
   {

@@ -11,26 +11,32 @@
                     <b><span>{{company.companyCode}}</span></b>
                 </div>  
             </div>
+            </div>
+            </div>
 
-                <div class="col-md-8 mt">
+            <div class="container mt">
+              <div class="row">
+
+                <div class="col align-self-center">
+
                     <form>
 
                         <div class="form-group row">
-                          <label  class="col-sm-2 col-form-label">TurnOver</label>
+                          <label  class="col-sm-2 col-form-label"><b>TurnOver</b></label>
                           <div class="col-sm-10">
                             <input name="turnover" [(ngModel)]="company.turnover" type="text" class="form-control" value={{company.turnover}}>
                           </div>
                         </div>
 
                         <div class="form-group row">
-                          <label for="inputPassword" class="col-sm-2 col-form-label">CEO</label>
+                          <label class="col-sm-2 col-form-label"><b>CEO</b></label>
                           <div class="col-sm-10">
                             <input name="ceo" [(ngModel)]="company.ceo" type="text" class="form-control" placeholder={{company.ceo}}>
                           </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Board Of Directors</label>
+                            <label class="col-sm-2 col-form-label"><b>Board Of Directors</b></label>
                             <div class="col-sm-10">
                               <input name="boardOfDirectors" [(ngModel)]="company.boardOfDirectors" type="text" class="form-control" placeholder={{company.boardOfDirectors}}>
                             </div>
@@ -38,50 +44,28 @@
 
 
                         <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Listed in Stock Exchanges</label>
+                            <label class="col-sm-2 col-form-label"><b>Listed in Stock Exchanges</b></label>
                             <div class="col-sm-10">
                               <input name="listedinStockExchanges" [(ngModel)]="company.listedinStockExchanges" type="text" class="form-control" placeholder={{company.listedinStockExchanges}}>
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Brief</label>
+                            <label class="col-sm-2 col-form-label"><b>Brief</b></label>
                             <div class="col-sm-10">
-                              <input name="brief" [(ngModel)]="company.brief" type="text" class="form-control" placeholder={{company.brief}}>
+                              <textarea rows="4" cols="40" name="brief" [(ngModel)]="company.brief" type="text" class="form-control" placeholder={{company.brief}}></textarea>
                             </div>
                           </div>
 
-                          <a mat-raised-button (click)="onUpdate()" color="accent">Update</a>
-                          <a mat-raised-button color="warn">Delete</a>
+                          <div class="text-center mt">
+                            <a mat-raised-button (click)="onUpdate()" color="accent">Update</a>
+                            <a mat-raised-button (click)="onDelete()" color="warn">Delete</a>
+                          </div>
 
                       </form>
 
 
                 </div>
 
-                <!-- creating form -->
-<!--         
-                    <form >
-                        <mat-form-field class="full-width">
-                            <mat-label>Email Address</mat-label>
-                            <input
-                                formControlName="email"  
-                                type="text" 
-                                matInput />
-                        </mat-form-field>
-
-                        <mat-form-field class="full-width">
-                            <mat-label>Password</mat-label>
-                            <input 
-                            formControlName="password" 
-                            type="password" matInput />
-                        </mat-form-field>
-
-                        <div class="text-center mt">
-                            <button [disabled]="!formGroup.valid" class="full-width" type="submit" mat-raised-button color="accent">
-                                Login
-                            </button>
-                        </div>
-                </form> -->
             </div>
         </div>

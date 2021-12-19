@@ -1,0 +1,52 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt text-center">
+        <div class="row">
+            <div class="col-sm-1">
+                <button mat-icon-button color="primary" routerLink="/view-all-stockexchanges">
+                    <mat-icon>undo</mat-icon>
+                  </button>
+            </div>
+                <div class="col-sm-10">
+                    <h1>{{stockex.stockExchange}}</h1>
+                </div>  
+            </div>
+            </div>
+</div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col align-self-center">
+
+                  <form>
+
+                    <div class="form-group row">
+                      <label  class="col-sm-2 col-form-label"><b>Brief</b></label>
+                      <div class="col-sm-10">
+                        <textarea rows="4" cols="40" name="brief" [(ngModel)]="stockex.brief" type="text" class="form-control" placeholder={{stockex.brief}}></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label"><b>Contact Address</b></label>
+                      <div class="col-sm-10">
+                        <textarea rows="2" cols="20" name="contactAddress" [(ngModel)]="stockex.contactAddress" type="text" class="form-control" placeholder={{stockex.contactAddress}}></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label"><b>Remarks</b></label>
+                        <div class="col-sm-10">
+                          <textarea rows="4" cols="40" name="remarks" [(ngModel)]="stockex.remarks" type="text" class="form-control" placeholder={{stockex.remarks}}></textarea>
+                        </div>
+                      </div>
+
+                      <div class="text-center mt">
+                        <a mat-raised-button (click)="onUpdate()" color="accent">Update</a>
+                      </div>
+                  </form>
+
+
+                </div>
+              </div>
+            </div>
+    

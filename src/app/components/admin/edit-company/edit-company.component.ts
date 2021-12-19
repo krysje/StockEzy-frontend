@@ -37,4 +37,11 @@ export class EditCompanyComponent implements OnInit {
     });
   }
 
+  onDelete(){
+    this._adminService.DeleteCompany(this.company.companyCode).subscribe(response=>{
+      console.log(response);
+      this._router.navigateByUrl('/view-all-companies');
+    })
+  }
+
 }

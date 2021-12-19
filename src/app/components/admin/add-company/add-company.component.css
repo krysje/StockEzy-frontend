@@ -1,0 +1,13 @@
+form{
+   margin: 0 auto;
+    width: 60%;
+}
+
+form label{
+    text-align: left;
+    font-weight: bold;
+}
+
+.frm{
+   align-content: center;
+}

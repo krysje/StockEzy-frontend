@@ -1,3 +1,5 @@
+import { EditStockexchangeComponent } from './components/admin/edit-stockexchange/edit-stockexchange.component';
+import { StockExchangesComponent } from './components/admin/stock-exchanges/stock-exchanges.component';
 import { AddCompanyComponent } from './components/admin/add-company/add-company.component';
 import { EditCompanyComponent } from './components/admin/edit-company/edit-company.component';
 import { CompaniesComponent } from './components/admin/companies/companies.component';
@@ -45,6 +47,16 @@ const routes: Routes = [
     path:'add-company',
     component:AddCompanyComponent,
     canActivate:[AuthGuard]
+  },
+  {
+    path:'view-all-stockexchanges',
+    component:StockExchangesComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'edit-stockexchange',
+    component: EditStockexchangeComponent,
+    canActivate: [AuthGuard]
   }
 ];
 
